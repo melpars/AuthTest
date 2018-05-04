@@ -95,6 +95,10 @@ function isLoggedIn(req, res, next) {
 	res.redirect("/login");
 }
 
-app.listen(8080, function() {
-	console.log("Auth Test App has started!");
-});
+// undefined port and IP
+app.listen(process.env.PORT, process.env.IP);
+
+///// Local Test:
+// app.listen(8080, function() {
+// 	console.log("Auth Test App has started!");
+// });
